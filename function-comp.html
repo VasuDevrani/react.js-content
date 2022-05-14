@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First React</title>
+    <style>
+      .nav{
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+      }
+      .navitem  {
+        color: white;
+        list-style-type:none ;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <p>Correlated components__________________________________</p>
+    <div id="root1"></div>
+    <p>Navbar___________________________________________</p> 
+    <div id="root3"></div>
+    <!-- cdn links of React -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- Script by programmer (me) -->
+    <script type="text/babel">
+      function Component() {
+        return (
+          <div>
+            <h1>Hello World</h1>
+            <ol>
+              <li>list1</li>
+              <li>list2</li>
+              <li>list3</li>
+              <li>list4</li>
+            </ol>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<Component/>, document.getElementById('root'));
+
+      // Correlated elements 
+
+      function Header()
+      {
+        return (
+            <h1>This is the Header Component</h1>
+        )
+      };
+      function Body()
+      {
+        return (
+          <ol>
+              <li>list1</li>
+              <li>list2</li>
+              <li>list3</li>
+              <li>list4</li>
+            </ol>
+        )
+      };
+      function Footer()
+      {
+        return (
+            <p>copyright subjected to government</p>
+        )
+      };
+
+      function FinalPage()
+      {
+          return (
+            <div>
+              <Header/>
+              <Body/>
+              <Footer/>
+            </div>
+          )
+      }
+      ReactDOM.render(<FinalPage/>,document.querySelector('#root1'));
+
+      // Using classes in components
+      function Navbar()
+      {
+        return (
+            <div>
+                <ul className="nav">
+                  <li className="navitem">Navitem1</li>
+                  <li className="navitem">Navitem2</li>
+                  <li className="navitem">Navitem3</li>
+                  <li className="navitem">Navitem4</li>
+                  <li className="navitem">Navitem5</li>
+                  </ul>
+            </div>
+        )
+      };
+      
+      ReactDOM.render(<Navbar/>,document.querySelector('#root3'));
+    </script>
+  </body>
+</html>

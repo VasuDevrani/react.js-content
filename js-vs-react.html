@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React vs Javascript</title>
+  </head>
+  <body>
+    <div class="root"></div>
+    <div class="root1"></div>
+    <div class="root2"></div>
+
+    <!-- cdn links of React -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      let root = document.querySelector(".root");
+      let root1 = document.querySelector(".root1");
+      let root2 = document.querySelector(".root2");
+
+      // Creating html elments components or elements
+
+      // Using append in javascript
+      const h1 = document.createElement("h1");
+      h1.innerText = "Hello How are you";
+      h1.className = "javascript-append";
+      root.append(h1);
+
+      // Using string in javascript
+      let html = '<h1 className="javascript-append">Hello How are you</h1>';
+      root1.innerHTML = html;
+
+      // Using react
+      ReactDOM.render(
+        <h1 className="javascript-append">Hello How are you</h1>,
+        root2
+      );
+    </script>
+  </body>
+</html>

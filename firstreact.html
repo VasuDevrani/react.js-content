@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First React</title>
+  </head>
+  <body>
+    <!-- The div that will be targeted for changes in the DOM -->
+    <div id="root"></div>
+    <div id="root1"></div>
+    <div id="root2"></div>
+
+    <!-- cdn links of React -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- Script by programmer (me) -->
+    <script type="text/babel">
+      ReactDOM.render(  //appending a html to an element in html
+        <h1>Hello, This is Vasu</h1>,
+        document.getElementById("root1")
+      );
+      
+      ReactDOM.render(
+        <ul><li>HelloHello</li><li>HelloHello</li><li>HelloHello</li></ul>,
+        document.getElementById("root")
+      );
+
+      // React component
+      // React uses Pascal casing
+      function MainContent(){
+        return (
+          <h1>This comes out of react component.</h1>
+        )
+      }
+
+      ReactDOM.render(
+          <MainContent/>
+         ,
+        document.getElementById("root2")
+      );
+    </script>
+  </body>
+</html>

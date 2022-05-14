@@ -1,0 +1,2 @@
+To create app : npx create-react-app new-app
+To start the server : npm start
