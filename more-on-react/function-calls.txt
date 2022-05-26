@@ -1,0 +1,27 @@
+export default function Navbar()
+{
+    const name='vasu';
+    function func1()
+    {
+        console.log("hello");
+    }
+    function func2(name)
+    {
+        console.log({name});
+    }
+    function func3(e)
+    {
+        console.log(e.target);
+    }
+
+    return(
+        <>
+            <div className="buttons">
+                <h1>{name}</h1>
+                <button onClick={func1}>Click Me</button>
+                <button onClick={()=>func2('hello')}>Click Me</button>
+                <button onClick={(e)=>func3}></button>
+            </div>
+        </>
+    )
+}

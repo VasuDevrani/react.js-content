@@ -1,0 +1,30 @@
+export default function Navbar()
+{
+    const [item,setItem]=useState('');
+
+    //useEffect hook is used to mark the change in any element which is present in its dependencies that is the lower brackets
+    useEffect(()=>{
+
+    },dependencies)
+
+    //This will console log render everytime there is any change in page
+    useEffect(()=>{
+        console.log('render');
+    })
+
+    //This will console log render once at the start of page as then there would be no change in dependency
+    useEffect(()=>{
+        console.log('render');
+    },[])
+
+    //This will console log 'item changed' everytime change in dependency
+    useEffect(()=>{
+        console.log('item changed');
+    },[item])
+
+    return(
+        <>
+            
+        </>
+    )
+}

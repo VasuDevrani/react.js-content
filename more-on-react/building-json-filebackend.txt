@@ -1,0 +1,33 @@
+//We can build a JSON backend server to access and change our data.
+//this is help preventing the access of data fromm local storage
+//the data we'll store iin json development api/server will be loaded using the useState hook at the start of the render of application
+
+
+STEPS---
+1. create a data folder and create a json file
+2. run the command in another terminal npx json-server -p 3500(write port value other than the app server) -w data/file.json
+3. Now you can use the entered port as backend storage and push a get or post request to it
+4. Finally you can watch the api requests on the terminal and use the resource url as api to access by developers
+
+
+PS C:\Users\Vasu Devrani\Documents\FULLstack_developer\React.js\firstapp> npx json-server -p 3500 -w data/db.json
+
+  \{^_^}/ hi!
+  
+  Loading data/db.json
+  Done
+
+  Resources
+  http://localhost:3500/items
+
+  Home
+  http://localhost:3500
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+GET /items 200 8.602 ms - 223
+GET /items 304 16.530 ms - - 
+
+
+5.
